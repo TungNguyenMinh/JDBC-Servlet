@@ -2,6 +2,7 @@ package com.laptrinhjavaweb.controller.admin;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,13 +16,12 @@ public class HomeController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		super.doGet(request, response);
+		RequestDispatcher rd = request.getRequestDispatcher("/views/admin/home.jsp");
+		rd.forward(request, response);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		super.doPost(request, response);
+
 	}
 }
