@@ -1,4 +1,4 @@
-package com.laptrinhjavawed.model;
+package com.laptrinhjavaweb.model;
 
 public class UserModel extends AbstractModel {
 	private String userName;

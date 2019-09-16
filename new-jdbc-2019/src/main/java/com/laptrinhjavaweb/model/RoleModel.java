@@ -1,4 +1,4 @@
-package com.laptrinhjavawed.model;
+package com.laptrinhjavaweb.model;
 
 public class RoleModel extends AbstractModel {
 	private String code;

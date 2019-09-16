@@ -1,4 +1,4 @@
-package com.laptrinhjavawed.model;
+package com.laptrinhjavaweb.model;
 
 public class NewModel extends AbstractModel {
 	private String title;

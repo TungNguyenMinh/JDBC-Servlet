@@ -1,4 +1,4 @@
-package com.laptrinhjavawed.model;
+package com.laptrinhjavaweb.model;
 
 import java.sql.Timestamp;
 
