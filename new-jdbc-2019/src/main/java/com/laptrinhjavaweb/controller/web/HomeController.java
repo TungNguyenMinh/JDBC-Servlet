@@ -18,14 +18,16 @@ public class HomeController extends HttpServlet {
 
 	@Inject
 	private ICategoryService categoryService;
+	
 	@Inject
 	private INewService newService;
+	
 	private static final long serialVersionUID = 2686801510274002166L;
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Long categoryId = 1L;
-		request.setAttribute("categorys", newService.findByCategoryId(categoryId));
+		
+		request.setAttribute("categorys",categoryService.findAll());
 		RequestDispatcher rd = request.getRequestDispatcher("/views/web/home.jsp");
 		rd.forward(request, response);
 	}

@@ -5,7 +5,7 @@ public class NewModel extends AbstractModel {
 	private String thumbnail;
 	private String shortDescription;
 	private String content;
-	private String categoryId;
+	private Long categoryId;
 
 	public String getTitle() {
 		return title;
@@ -39,11 +39,11 @@ public class NewModel extends AbstractModel {
 		this.content = content;
 	}
 
-	public String getCategoryId() {
+	public Long getCategoryId() {
 		return categoryId;
 	}
 
-	public void setCategoryId(String cotegoryId) {
+	public void setCategoryId(Long cotegoryId) {
 		this.categoryId = cotegoryId;
 	}
 

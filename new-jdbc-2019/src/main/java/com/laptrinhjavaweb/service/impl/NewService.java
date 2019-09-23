@@ -12,9 +12,16 @@ public class NewService implements INewService {
 
 	@Inject
 	private INewDAO newDao;
+
 	@Override
 	public List<NewModel> findByCategoryId(Long categoryId) {
 		return newDao.findByCategoryId(categoryId);
+	}
+
+	@Override
+	public NewModel save(NewModel newmodel) {
+		
+		return null;
 	}
 
 }
