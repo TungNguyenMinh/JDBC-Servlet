@@ -43,8 +43,8 @@ public class NewModel extends AbstractModel {
 		return categoryId;
 	}
 
-	public void setCategoryId(Long cotegoryId) {
-		this.categoryId = cotegoryId;
+	public void setCategoryId(Long categoryId) {
+		this.categoryId = categoryId;
 	}
 
 }

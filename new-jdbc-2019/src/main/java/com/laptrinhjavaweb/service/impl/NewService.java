@@ -19,8 +19,9 @@ public class NewService implements INewService {
 	}
 
 	@Override
-	public NewModel save(NewModel newmodel) {
-		
+	public NewModel save(NewModel newModel) {
+		Long newId = newDao.save(newModel);
+		System.out.println(newId);
 		return null;
 	}
 
