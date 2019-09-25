@@ -1,4 +1,4 @@
-use jspservletjdbc;
+use newservlet2019;
 
 insert into role(code,name) values('ADMIN','ADMIN');
 insert into role(code,name) values('USER','USER');
