@@ -24,4 +24,20 @@ public class NewService implements INewService {
 		return newDao.findOne(newId);
 	}
 
+	@Override
+	public NewModel update(NewModel updateNew) {
+		NewModel oldNew = newDao.findOne(updateNew.getId());
+		updateNew.setCreatedDate(oldNew.getCreatedDate());
+		updateNew.setCreatedBy(oldNew.getCreatedBy());
+		newDao.update(updateNew);
+		return newDao.findOne(updateNew.getId());
+	}
+
+	@Override
+	public void delete(long[] ids) {
+		for (long id : ids) {
+			newDao.delete(id);
+		}
+	}
+
 }
