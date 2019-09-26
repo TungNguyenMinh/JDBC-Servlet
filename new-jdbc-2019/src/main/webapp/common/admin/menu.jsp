@@ -5,7 +5,8 @@
 	<script type="text/javascript">
 		try {
 			ace.settings.loadState('sidebar')
-		} catch (e) {}
+		} catch (e) {
+		}
 	</script>
 	<div class="sidebar-shortcuts">
 		<div class="sidebar-shortcuts-large">
@@ -31,17 +32,17 @@
 		</div>
 	</div>
 	<ul class="nav nav-list">
-		<li><a href="#" class="dropdown-toggle"> <i class="menu-icon fa fa-list"></i> <span class="menu-text"></span>
-				Quản lý bài viết <b class="arrow fa fa-angle-down"></b>
-			</a> <b class="arrow"></b>
+		<li><a href="#" class="dropdown-toggle"> <i class="menu-icon fa fa-list"></i> <span
+				class="menu-text"></span> Quản lý bài viết <b class="arrow fa fa-angle-down"></b>
+		</a> <b class="arrow"></b>
 			<ul class="submenu">
-				<li><a href="#"> <i class="menu-icon fa fa-caret-right"></i> DS bài viết
-					</a> <b class="arrow"></b></li>
-			</ul>
-		</li>
+				<li><a href='<c:url value="/admin-new-list"/>'> <i class="menu-icon fa fa-caret-right"></i>
+						DS bài viết
+				</a> <b class="arrow"></b></li>
+			</ul></li>
 	</ul>
 	<div class="sidebar-toggle sidebar-collapse">
-		<i class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left"
-			data-icon2="ace-icon fa fa-angle-double-right"></i>
+		<i class="ace-icon fa fa-angle-double-left ace-save-state"
+			data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
 	</div>
 </div>

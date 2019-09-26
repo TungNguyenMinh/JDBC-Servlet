@@ -57,5 +57,4 @@ public class AbstractModel {
 	public void setIds(long[] ids) {
 		this.ids = ids;
 	}
-
 }
