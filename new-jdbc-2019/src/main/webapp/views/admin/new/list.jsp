@@ -63,8 +63,9 @@
     <script type="text/javascript">
         $(function () {
             window.pagObj = $('#pagination').twbsPagination({
-                totalPages: 35,
-                visiblePages: 10,
+            	startPage: 2,
+                totalPages: 10,
+                visiblePages: 5,
                 onPageClick: function (event, page) {
                     console.info(page + ' (from options)');
                 }
