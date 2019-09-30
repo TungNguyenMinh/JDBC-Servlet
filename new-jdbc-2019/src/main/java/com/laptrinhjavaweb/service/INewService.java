@@ -9,4 +9,5 @@ public interface INewService {
 	NewModel save(NewModel newmodel);
 	NewModel update(NewModel updateNew);
 	void delete(long[] ids);
+	List<NewModel> findAll();
 }
