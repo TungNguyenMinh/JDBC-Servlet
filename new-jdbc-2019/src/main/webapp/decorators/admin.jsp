@@ -61,6 +61,7 @@
 	<script src="<c:url value='/template/admin/assets/js/bootstrap.min.js'/>"></script>
 
 	<!-- page specific plugin scripts -->
+	<script src="<c:url value='/template/admin/assets/js/jquery-ui.min.js'/>"></script>
 </body>
 
 </html>
