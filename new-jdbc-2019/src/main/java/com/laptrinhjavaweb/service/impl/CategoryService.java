@@ -20,7 +20,6 @@ public class CategoryService implements ICategoryService {
 
 	@Override
 	public List<CategoryModel> findAll() {
-
 		return categoryDao.findAll();
 	}
 
