@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.laptrinhjavaweb.com.constant.SystemConstant;
 import com.laptrinhjavaweb.model.NewModel;
 import com.laptrinhjavaweb.service.INewService;
+import com.laptrinhjavaweb.utils.FormUtil;
 
 @WebServlet(urlPatterns = "/admin-new")
 public class NewController extends HttpServlet {
@@ -24,17 +25,7 @@ public class NewController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		NewModel model = new NewModel();
-		String pageSTr = request.getParameter("page");
-		String maxPageItem = request.getParameter("maxPageItem");
-		if (pageSTr != null) {
-			model.setPage(Integer.parseInt(pageSTr));
-		} else {
-			model.setPage(1);
-		}
-		if (maxPageItem != null) {
-			model.setMaxPageItem(Integer.parseInt(maxPageItem));
-		}
+		NewModel model = FormUtil.toModel(NewModel.class, request);
 		Integer offset = (model.getPage() - 1) * model.getMaxPageItem();
 		model.setListResult(newService.findAll(offset, model.getMaxPageItem()));
 		model.setTotalItem(newService.getTotalItem());
