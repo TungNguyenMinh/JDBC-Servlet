@@ -3,12 +3,13 @@ package com.laptrinhjavaweb.service;
 import java.util.List;
 
 import com.laptrinhjavaweb.model.NewModel;
+import com.laptrinhjavaweb.paging.Pageble;
 
 public interface INewService {
 	List<NewModel> findByCategoryId(Long categoryId);
 	NewModel save(NewModel newmodel);
 	NewModel update(NewModel updateNew);
 	void delete(long[] ids);
-	List<NewModel> findAll(Integer offset, Integer limit);
+	List<NewModel> findAll(Pageble pageble);
 	int getTotalItem();
 }
