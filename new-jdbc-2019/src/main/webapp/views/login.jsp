@@ -11,8 +11,8 @@
 	<div class="container">
 		<div class="login-form">
 			<div class="main-div">
+				<div class="alert alert-${alert}">${message}</div>
 				<form action="<c:url value='/dang-nhap'/>" id="formLogin" method="post">
-					<%-- <form action="<c:url value='/dang-nhap'/>" id="formLogin" method="post"> --%>
 					<div class="form-group">
 						<input type="text" class="form-control" id="userName" name="userName"
 							placeholder="Tên đăng nhập">
