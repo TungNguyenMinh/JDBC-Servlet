@@ -43,8 +43,7 @@
 											<c:forEach var="item" items="${categories}">
 												<option value="${item.code}"
 													<c:if test="${item.code == model.categoryCode}"> selected="selected"</c:if>>
-													${item.name}
-												</option>
+													${item.name}</option>
 											</c:forEach>
 										</c:if>
 									</select>
@@ -100,10 +99,10 @@
 		</div>
 	</div>
 	<script>
-		var editor = '';
+		/* var editor = '';
 		$(document).ready(function() {
 			editor = CKEDITOR.replace('content');
-		});
+		}); */
 
 		$('#btnAddOrUpdateNew').click(function(e) {
 			e.preventDefault();
@@ -112,7 +111,7 @@
 			$.each(formData, function(i, v) {
 				data["" + v.name + ""] = v.value;
 			});
-			data["content"] = editor.getData();
+			/* data["content"] = editor.getData(); */
 			var id = $('#id').val();
 			if (id == "") {
 				addNew(data);

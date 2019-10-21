@@ -28,7 +28,8 @@ public class NewService implements INewService {
 	@Override
 	public NewModel save(NewModel newModel) {
 		newModel.setCreatedDate(new Timestamp(System.currentTimeMillis()));
-		newModel.setCreatedBy("");// chưa xử lý đăng nhập buff use vào để empty
+		CategoryModel category = categoryDao.findOneByCode(newModel.getCategoryCode());
+		newModel.setCategoryId(category.getId());
 		Long newId = newDao.save(newModel);
 		return newDao.findOne(newId);
 	}
@@ -39,8 +40,8 @@ public class NewService implements INewService {
 		updateNew.setCreatedDate(oldNew.getCreatedDate());
 		updateNew.setCreatedBy(oldNew.getCreatedBy());
 		updateNew.setModifiledDate(new Timestamp(System.currentTimeMillis()));
-		updateNew.setModifiedBy("");// chưa xử lý đăng nhập buff use vào để
-									// empty
+		CategoryModel category = categoryDao.findOneByCode(updateNew.getCategoryCode());
+		updateNew.setCategoryId(category.getId());
 		newDao.update(updateNew);
 		return newDao.findOne(updateNew.getId());
 	}

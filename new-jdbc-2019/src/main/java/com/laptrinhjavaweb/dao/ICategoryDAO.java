@@ -6,5 +6,6 @@ import com.laptrinhjavaweb.model.CategoryModel;
 
 public interface ICategoryDAO extends GenericDAO<CategoryModel> {
 	List<CategoryModel> findAll();
-	CategoryModel findOne(Long id);
+	CategoryModel findOne(long id);
+	CategoryModel findOneByCode(String code);
 }
