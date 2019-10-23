@@ -55,7 +55,7 @@
 											<table class="table table-bordered">
 												<thead>
 													<tr>
-														<th><input type="checkbox" id="checkAll"></th>
+														<th><input type="checkbox" id="checkAll" data-toggle="tooltip" title="Xóa tất cả "></th>
 														<th>Tên bài viết</th>
 														<th>Mô tả ngắn</th>
 														<th>Thao tác</th>
