@@ -2,8 +2,6 @@ package com.laptrinhjavaweb.utils;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.laptrinhjavaweb.com.constant.SystemConstant;
-
 public class MessageUtil {
 	public static void showMessage(HttpServletRequest request) {
 
